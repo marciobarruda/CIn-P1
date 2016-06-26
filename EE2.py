@@ -7,6 +7,7 @@ def qs(lista): # função quickSort: ordena uma lista, revomendo as duplicatas
         pivor=lista[0]
         return (qs([x for x in lista if x<pivor])+[pivor]+qs([x for x in lista if x>pivor]))
 
+
 def maior (lista): # função maior: devolve o maior elemento de uma lista de tuplas compostas por um inteiro e uma lista de inteiros
     
     if lista == []:
@@ -26,6 +27,15 @@ def maior (lista): # função maior: devolve o maior elemento de uma lista de tu
         else:
             lista.pop(0)
         return maior(lista)
+
+
+def divisores(x):
+
+    if x <= 0:
+        return False
+    else:
+        return [y for y in range (1, x+1) if x%y==0] # retorna uma lista com todos os divisores inteiros de x
+
 
 # 1ª QUESTÃO
 # ==========
@@ -72,13 +82,6 @@ def mediana(lista): # função mediana: devolve a mediana de uma lista
 # >>> maisDivisores([1, 3, 5, 7, 11, 13, 17])
 # (17, [1, 17])
 
-
-def divisores(x):
-
-    if x <= 0:
-        return False
-    else:
-        return [y for y in range (1, x+1) if x%y==0] # retorna uma lista com todos os divisores inteiros de x
 
 def maisDivisores(lista):
 
